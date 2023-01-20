@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    text-decoration: none;
 }
 
 @tailwind base;
@@ -18,4 +22,208 @@ body {
         font-style: normal;
         font-display: swap;
     }
+    @font-face {
+        font-family: "Oxygen";
+        src: url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.grid {
+    background-color: #151a35;
+}
+
+.grid {
+    @media only screen and (min-width: 320px) {
+        margin: 20px;
+    }
+    @media only screen and (min-width: 481px) {
+        margin: 42px;
+    }
+    @media only screen and (min-width: 769px) {
+        margin: 70px;
+    }
+}
+
+//legend css
+.start-node {
+    background-color: green;
+    height: 25px;
+    width: 25px;
+}
+
+.target-node {
+    background-color: red;
+    height: 25px;
+    width: 25px;
+}
+
+.wall-node {
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    outline: 1px solid white;
+}
+
+.unvisited-node {
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    outline: 1px solid black;
+}
+
+.visited-node {
+    background-color: rgba(0, 190, 218, 0.75);
+    height: 25px;
+    width: 25px;
+}
+
+.shortest-path-node {
+    background-color: rgb(255, 123, 0);
+    height: 25px;
+    width: 25px;
+}
+
+/*Node  css*/
+
+.node {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    border: 1px solid black;
+}
+
+.node-start {
+    background-color: green;
+}
+
+.node-finish {
+    background-color: red;
+}
+
+.node-wall {
+    background-color: black;
+}
+
+.node-animated-wall {
+    animation-name: wallAnimation;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes wallAnimation {
+    0% {
+        transform: scale(0.4);
+        background-color: rgb(2, 36, 51);
+        border-radius: 30%;
+    }
+
+    50% {
+        transform: scale(0.6);
+        background-color: rgb(2, 36, 51);
+        border-radius: 20%;
+    }
+
+    75% {
+        transform: scale(0.8);
+        background-color: rgb(2, 36, 51);
+        border-radius: 10%;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(2, 36, 51);
+        border: 1px solid rgb(2, 36, 51);
+    }
+}
+
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+    0% {
+        transform: scale(0.3);
+        background-color: rgba(0, 0, 66, 0.75);
+        border-radius: 100%;
+    }
+
+    50% {
+        background-color: rgba(17, 104, 217, 0.75);
+    }
+
+    75% {
+        transform: scale(1.2);
+        background-color: rgba(0, 217, 159, 0.75);
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgba(0, 190, 218, 0.75);
+    }
+}
+
+.node-shortest-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes shortestPath {
+    0% {
+        transform: scale(0.6);
+        background-color: rgb(250, 181, 92);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: rgb(255, 177, 59);
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(255, 123, 0);
+    }
+}
+
+/* Progress bar*/
+.visited-nodes-bar {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.shortest-nodes-bar {
+    display: inline-block;
+    margin-right: 15px;
 }

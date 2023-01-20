@@ -7,7 +7,10 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
+                oxygen: "Oxygen",
                 georgia: "Georgia",
+                openSans: "Open Sans",
+                moon: "Moon Dance",
             },
         },
     },
