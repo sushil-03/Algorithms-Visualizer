@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback, useSetState } from "react";
 import Slider from "@mui/material/Slider";
 import { getMergeSortAnimation } from "../algorithm/sorting/mergeSort";
-import bubbleSort from "../algorithm/sorting/BubbleSort";
+import bubbleSort from "../algorithm/sorting/bubbleSort";
 import insertionSort from "../algorithm/sorting/insertionSort";
 import quickSort from "../algorithm/sorting/quickSort";
 import driver from "../components/visualizeHelper";
-import selectionSort from "../algorithm/sorting/SelectionSort";
+import selectionSort from "../algorithm/sorting/selectionSort";
 
 const Sorting = () => {
     const PRIMARY_COLOR = "#0074D9";
