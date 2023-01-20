@@ -21,8 +21,7 @@ import {
 } from "../components/MazeVisualizer";
 import AppNavbar from "../components/AppNavbar/AppNavbar";
 import ErrorModal from "../components/ErrorModal/ErrorModal";
-import TooltipExampleMulti from "../components/ToolTip/Tooltip";
-import Legend from "../components/Legend/legend";
+// import TooltipExampleMulti from "../components/ToolTip/Tooltip";
 
 // constants - initial coordinates for start and finish nodes
 const START_NODE_ROW = 10;
