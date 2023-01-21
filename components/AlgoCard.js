@@ -1,10 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 const AlgoCard = ({ image, heading, detail, url, buttonName }) => {
     return (
         <div className="md:w-2/6 sm:w-1/4 border p-3 rounded-md mt-5 ">
             <div className="text-center  ">
                 <span className="text-2xl ">{heading}</span>
-
+                <div>
+                    <Image
+                        src={`/images/${image}`}
+                        alt="do"
+                        width={300}
+                        height={200}
+                    />
+                </div>
                 <p className="text-sm text-gray-500 mb-5 p-2 h-1/5 ">
                     {detail}
                 </p>
